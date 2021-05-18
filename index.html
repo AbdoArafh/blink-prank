@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .blink {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-color: orange;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blink test</title>
+  </head>
+  <body>
+    <!-- <div class="blink"></div> -->
+    <script>
+        const blinkingObject = document.body;
+        let condition = false;
+        setInterval(() => {
+            condition = !condition;
+            condition ? blinkingObject.style.backgroundColor = "red" : blinkingObject.style.backgroundColor = "blue";
+        }, 50);
+    </script>
+  </body>
+</html>
